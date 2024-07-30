@@ -1,0 +1,40 @@
+# Ignore file của IDE (Eclipse, IntelliJ, NetBeans, VS Code, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+*.classpath
+*.project
+
+# Ignore các file build của Maven
+target/
+
+# Ignore các file build của Gradle
+build/
+.gradle/
+
+# Ignore các file log
+*.log
+
+# Ignore các file của hệ thống quản lý dependencies
+# Maven
+repository/
+# Gradle
+.gradle/
+
+# Ignore các file configuration properties (thường có trong Spring Boot)
+/application.properties
+/application.yml
+
+# Ignore các file temporary
+*.tmp
+
+# Ignore các file test reports
+/test-output/
+
+# Ignore các file được tạo bởi phần mềm linter hoặc formatter
+*.log
+*.bak
+
+# Ignore file editor-specific settings
+*.swp
