@@ -79,7 +79,7 @@ public class RestaurentServiceImp implements RestaurantService {
 
     @Override
     public List<Restaurant> sreachRestaurant(String keyword) {
-        return restaurantRepository.findBySreachQuery(keyword);
+        return restaurantRepository.searchByQuery(keyword);
     }
 
     @Override

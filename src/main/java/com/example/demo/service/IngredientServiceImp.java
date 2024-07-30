@@ -37,7 +37,7 @@ public class IngredientServiceImp implements IngredientService {
 
     @Override
     public IngredientCategory findIngredientCategoryById(Long id) throws Exception {
-        Optional<IngredientCategory>opt = ingredientCategoriRepository.findById(id);
+        Optional<IngredientCategory>opt = Optional.empty();
         if(opt.isEmpty()){
             throw new Exception("Ingredient Categori not fount");
         }
@@ -72,7 +72,7 @@ public class IngredientServiceImp implements IngredientService {
         if(optIngredientsItem.isEmpty()){
             throw new Exception("Ingredient not found");
         }
-        IngredientsItem ingredientsItem = optIngredientsItem.get();
+        IngredientsItem ingredientsItem = (IngredientsItem) optIngredientsItem.get();
         ingredientsItem.setInStoke(ingredientsItem.isInStoke());
         return ingredientItemRepository.save(ingredientsItem);
     }
